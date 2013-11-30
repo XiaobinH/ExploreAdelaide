@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<!--
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=medium-dpi" />
+        <!--Default CSS JS-->
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" type="text/css" />
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+        <!--self defined CSS-->
+        <link rel="stylesheet" type="text/css" href="css/define.css" />
+        <!--Slide menu-->
+        <script type="text/javascript" src="js/creatheader.js"></script>
+        <!--POI lists-->
+        <script type="text/javascript" src="js/createPOI.js"></script>       
+        <!--Page Events-->
+        <script type="text/javascript" src="js/pageevents.js"></script>  
+        <title>Explore Adelaide</title>
+    </head>
+    <body>
+       
+        <!-- Map Page -->
+     <section data-role="page" id="map" data-theme="b" class="pages">            
+            <div data-role="header" class="pageheader">
+                <a href="#nav-panel" class="iconcontrol"></a>
+                <h1 class="pagetitle">Header</h1>
+            </div>
+            <div data-role="panel" id="nav-panel" class="pagepanel" data-swipe-close="true">
+                <div class="ui-panel-inner">
+                    <ul class="panelcontent">                        
+                    </ul>
+                </div>
+            </div>
+            <script> createheader($('#map'),'map');</script>
+            <div data-role="content">
+                <div class="app">
+                    <h1 class="taphold">Apache Cordova</h1>
+                    <div id="deviceready" class="blink">
+                        <p class="event listening ">Connecting to Device</p>
+                        <p class="event received ">Device is Ready</p>
+                    </div>
+                </div>
+                <div>
+                    <input id="target" type="text" value="Search POI">
+                </div>
+            </div>
+        </section>
+ 
+        <!-- Take a Tour Page -->
+        <section data-role="page" id="takeatour" data-title="Page Title" data-theme="b" class="pages" data-id="foo1">
+            <div data-role="header" class="pageheader">
+                <a href="#nav-panel" class="iconcontrol"></a>
+                <h1 class="pagetitle">Header</h1>
+            </div>
+            <div data-role="panel" id="nav-panel" class="pagepanel">
+                <div class="ui-panel-inner">
+                    <ul class="panelcontent">                        
+                    </ul>
+                </div>
+            </div>
+            <script> createheader($('#takeatour'),'takeatour');</script>
+            <div data-role="content">
+                <div class="ui-grid-a">
+                    <div class="ui-block-a" data-theme="a" data-content-theme="a">
+                        <p class="hover">Green Tour starts from CMUA. It guides you to explore Spring Adelaide.</p>
+                        <p class="hover">There purple followers are beautiful. In the morning you will love it.</p>
+                        <p class="hover">Biking and jogging are common in CBD. Want to be health? Join us!</p>
+                        <p class="hover">Badminton clubs are very common in CBD. Don't miss matches in clubs!</p>
+                        <a href="index.html" data-role="button">Green</a>
+                    </div>
+                    <div class="ui-block-b" data-content-theme="a">
+                        <p class="hover">Golden Tour will lead you to the best shops and stroes in Adelaide.</p>
+                        <p class="hover">Big sale in Central Market on Saturday is very famous. Don't miss it!</p>
+                        <p class="hover">Body wash is very cheap in Runddle mall. There are a lot of clothes too.</p>
+                        <p class="hover">Don't miss the Oyster bars in Adelaide! The best in the world!</p>                        
+                        <a href="index.html" data-role="button">Golden</a>
+                    </div>
+                </div>
+            </div>
+        </section>       
+
+         <!-- What to do Page -->
+        <section data-role="page" id="whattodo" data-title="Page Title" data-theme="b" class="pages" data-id="foo1">
+            <div data-role="header" class="pageheader">
+                <a href="#nav-panel" class="iconcontrol"></a>
+                <h1 class="pagetitle">Header</h1>
+            </div>
+            <div data-role="panel" id="nav-panel" class="pagepanel">
+                <div class="ui-panel-inner">
+                    <ul class="panelcontent">                        
+                    </ul>
+                </div>
+            </div>
+            <script> createheader($('#whattodo'),'whattodo');</script>
+            <div data-role="content">
+                <div data-role="collapsible-set">  
+                     <div data-role="collapsible" data-transition="slideup">
+                         <h3 class="todotitle">Visit Ruddle Mall</h3>
+                         <p class="todocontent dblclick">Cheap Deals!</p>
+                     </div>
+                     <div data-role="collapsible" data-transition="slideup">
+                         <h3 class="todotitle">Christmas Parade</h3>
+                         <p class="todocontent dblclick">Lots of kids!</p>
+                     </div>
+                     <div data-role="collapsible" data-transition="slideup">
+                         <h3 class="todotitle">Bike Competition</h3>
+                         <p class="todocontent dblclick">$5000 Award!</p>
+                     </div>   
+                </div> 
+            </div>
+        </section>       
+
+         <!-- Where to go Page -->
+        <section data-role="page" id="wheretogo" data-title="Page Title" data-theme="b" class="pages" data-id="foo1">
+            <div data-role="header" class="pageheader">
+                <a href="#nav-panel" class="iconcontrol"></a>
+                <h1 class="pagetitle">Header</h1>
+            </div>
+            <div data-role="panel" id="nav-panel" class="pagepanel">
+                <div class="ui-panel-inner">
+                    <ul class="panelcontent">                        
+                    </ul>
+                </div>
+            </div>
+            <script> createheader($('#wheretogo'),'wheretogo');</script>
+            <div data-role="content" class="no-padding">
+                <ul id='POIul' data-role="listview" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">       	
+                </ul>                
+            </div>
+            <script>createPOIs($('#POIul'));</script>
+        </section>       
+ 
+         <!-- Setting Page -->
+        <section data-role="page" id="setting" data-title="Page Title" data-theme="b" class="pages" data-id="foo1">
+            <div data-role="header" class="pageheader">
+                <a href="#nav-panel" class="iconcontrol"></a>
+                <h1 class="pagetitle">Header</h1>
+            </div>
+            <div data-role="panel" id="nav-panel" class="pagepanel no-padding">
+                <div class="ui-panel-inner">
+                    <ul class="panelcontent">                        
+                    </ul>
+                </div>
+            </div>
+            <script> createheader($('#setting'),'setting');</script>
+               <div data-role="content" class="no-padding">
+                    <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br">
+                        <label for="select-choice-15" class="select ui-select">Language</label>
+                        <div class="ui-select">
+                            <select name="select-choice-15" id="select-choice-15" data-theme="b" data-overlay-theme="d" data-native-menu="false" tabindex="-1">
+                                <option value="t">English</option>
+                                <option value="g">中文</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div data-role="fieldcontain">
+                    <label for="flip-2">Event Notification</label>
+                            <select name="flip-2" id="flip-2" data-role="slider">
+                                    <option value="nope">On</option>
+                                    <option value="yep">Off</option>
+                            </select> 
+                    </div>
+                   <div data-role="fieldcontain">
+                    <label for="flip-3">Auto Description</label>
+                            <select name="flip-3" id="flip-3" data-role="slider">
+                                    <option value="nope">On</option>
+                                    <option value="yep">Off</option>
+                            </select> 
+                    </div>                   
+               </div>
+        </section>       
+        
+        <!--.js Default js-->
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/movement.js"></script>
+        <script type="text/javascript">
+            app.initialize();            
+        </script>
+    </body>
+</html>
