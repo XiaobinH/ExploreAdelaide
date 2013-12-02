@@ -2,7 +2,7 @@
 
 function createMenuContents(){
     var menucontents = new Array();
-    menucontents[0] = { "name": "map", "href":"#map", "class":"menumap", text: "Map"};
+    menucontents[0] = { "name": "mappage", "href":"#mappage", "class":"menumap", text: "Map"};
     menucontents[1] = { "name": "takeatour", "href":"#takeatour", "class":"menutakeatour", text: "Take A Tour"};
     menucontents[2] = { "name": "whattodo", "href":"#whattodo", "class":"menuwhattodo", text: "What To Do"};
     menucontents[3] = { "name": "wheretogo", "href":"#wheretogo", "class":"menuwheretogo", text: "Where To Go"};
