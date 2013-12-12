@@ -1,0 +1,36 @@
+{
+ "POIs" : [
+    {   "index":0,
+        "name":"CMUA", 
+        "audiosrc":"",
+        "detailsrc":"",
+        "class":"CMUA",
+        "latitude":-34.928198998037224,
+        "longitude":138.6008760012919
+    }, 
+    {   "index":0,
+        "name":"Victoria Square", 
+        "audiosrc":"",
+        "detailsrc":"",
+        "class":"VictoriaSquare",
+        "latitude":-34.928032539091895,
+        "longitude":138.59985747432802
+    }, 
+     {   "index":0,
+        "name":"Central Market", 
+        "audiosrc":"",
+        "detailsrc":"",
+        "class":"CentralMarket",
+        "latitude":-34.92955427980423,
+        "longitude":138.59767952060793
+    }, 
+     {   "index":0,
+        "name":"St. Francis Xaviers Cathedral", 
+        "audiosrc":"",
+        "detailsrc":"",
+        "class":"StFrancisXaviersCathedral",
+        "latitude":-34.92891216144297,
+        "longitude":138.60141315555666
+    }    
+    ]
+}

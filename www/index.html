@@ -13,29 +13,31 @@
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
         <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
         <script type="text/javascript" src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+        <!--leaflet framework -->
+        <link rel="stylesheet" type="text/css" href="js/leaflet-master/leaflet.css" />
+        <script type="text/javascript" src="js/leaflet-master/leaflet.js"></script>      
+        <link rel="stylesheet" type="text/css" href="css/map.css" /> 
         <!--self defined CSS-->
         <link rel="stylesheet" type="text/css" href="css/define.css" />
         <!--Slide menu-->
         <script type="text/javascript" src="js/creatheader.js"></script>
         <!--POI lists-->
-        <script type="text/javascript" src="js/createPOI.js"></script>       
+        <script type="text/javascript" src="js/createPOI.js"></script>    
+        <!--Audio-->
+        <script type="text/javascript" src="js/audio.js"></script>       
+        <!--Language-->
+        <script type="text/javascript" src="js/language.js"></script>   
         <!--Page Events-->
         <script type="text/javascript" src="js/pageevents.js"></script>  
-        <!--leaflet framework
-        <link rel="stylesheet" type="text/css" href="css/leaflet.css" />
-        <script type="text/javascript" src="js/leaflet/leaflet.js"></script> -->
-        <link rel="stylesheet" type="text/css" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" />
-        <script type="text/javascript" src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>      
-        <link rel="stylesheet" type="text/css" href="css/map.css" />
         <title>Explore Adelaide</title>
     </head>
     <body>
        
         <!-- Map Page -->
-     <section data-role="page" id="mappage" data-theme="b" class="pages">            
+     <section data-role="page" id="mappage" data-theme="b" class="pages">    
             <div data-role="header" class="pageheader">
                 <a href="#nav-panel" class="iconcontrol"></a>
-                <h1 class="pagetitle">Header</h1>
+                <h1 class="pagetitle">Explore Adelaide</h1>
             </div>
             <div data-role="panel" id="nav-panel" class="pagepanel" data-swipe-close="true">
                 <div class="ui-panel-inner">
@@ -53,7 +55,7 @@
         <section data-role="page" id="takeatour" data-title="Page Title" data-theme="b" class="pages" data-id="foo1">
             <div data-role="header" class="pageheader">
                 <a href="#nav-panel" class="iconcontrol"></a>
-                <h1 class="pagetitle">Header</h1>
+                <h1 class="pagetitle">Take A Tour</h1>
             </div>
             <div data-role="panel" id="nav-panel" class="pagepanel">
                 <div class="ui-panel-inner">
@@ -86,7 +88,7 @@
         <section data-role="page" id="whattodo" data-title="Page Title" data-theme="b" class="pages" data-id="foo1">
             <div data-role="header" class="pageheader">
                 <a href="#nav-panel" class="iconcontrol"></a>
-                <h1 class="pagetitle">Header</h1>
+                <h1 class="pagetitle">What to do</h1>
             </div>
             <div data-role="panel" id="nav-panel" class="pagepanel">
                 <div class="ui-panel-inner">
@@ -117,7 +119,7 @@
         <section data-role="page" id="wheretogo" data-title="Page Title" data-theme="b" class="pages" data-id="foo1">
             <div data-role="header" class="pageheader">
                 <a href="#nav-panel" class="iconcontrol"></a>
-                <h1 class="pagetitle">Header</h1>
+                <h1 class="pagetitle">Where to go</h1>
             </div>
             <div data-role="panel" id="nav-panel" class="pagepanel">
                 <div class="ui-panel-inner">
@@ -137,7 +139,7 @@
         <section data-role="page" id="setting" data-title="Page Title" data-theme="b" class="pages" data-id="foo1">
             <div data-role="header" class="pageheader">
                 <a href="#nav-panel" class="iconcontrol"></a>
-                <h1 class="pagetitle">Header</h1>
+                <h1 class="pagetitle">Setting</h1>
             </div>
             <div data-role="panel" id="nav-panel" class="pagepanel no-padding">
                 <div class="ui-panel-inner">
@@ -150,9 +152,9 @@
                     <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br">
                         <label for="select-choice-15" class="select ui-select">Language</label>
                         <div class="ui-select">
-                            <select name="select-choice-15" id="select-choice-15" data-theme="b" data-overlay-theme="d" data-native-menu="false" tabindex="-1">
-                                <option value="t">English</option>
-                                <option value="g">中文</option>
+                            <select class="languagemenu" name="select-choice-15" id="select-choice-15" data-theme="b" data-overlay-theme="d" data-native-menu="false" tabindex="-1">
+                                <option value="English">English</option>
+                                <option value="Spanish">español</option>
                             </select>
                         </div>
                     </div>
@@ -175,11 +177,11 @@
         
         <!--.js Default js-->
         <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/createMap.js"></script> 
         <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript" src="js/movement.js"></script>
-        <script src="js/createMap.js"></script> 
+        <script type="text/javascript" src="js/movement.js"></script>       
         <script type="text/javascript">
-            //app.initialize();            
+            app.initialize();            
         </script>
     </body>
 </html>

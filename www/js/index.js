@@ -2,7 +2,9 @@ $(document).on('pageinit', '#mappage', function(){
 });
 
 $(document).ready(function() {
-    initmapWeb('c9a19f8807a64735aff2c22833d6817a');
+    initmapWeb('c9a19f8807a64735aff2c22833d6817a',-34.92862, 138.59996, 16);
+    initPOIs("extfiles/POIs.json");
+    bindLanguageChangeEvent();
 });
 
 var app = {
@@ -22,18 +24,15 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        initmap("d123a9c35892443a9f9b7f35b2922043",1); // from createMap.js
+        //initmap("d123a9c35892443a9f9b7f35b2922043",1); // from createMap.js
+        setAppLanguage();
+        sUtt = new SpeechSynthesisUtterance();
+        updateMyLocation();
+        //bindLocationChangeEvent();
+        currentLocationWatch(5000);
         app.receivedEvent('deviceready');        
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-//        var parentElement = document.getElementById(id);
-//        var listeningElement = parentElement.querySelector('.listening');
-//        var receivedElement = parentElement.querySelector('.received');
-//
-//        listeningElement.setAttribute('style', 'display:none;');
-//        receivedElement.setAttribute('style', 'display:block;');
-//
-//        console.log('Received Event: ' + id);
-    }
+    },
 };
