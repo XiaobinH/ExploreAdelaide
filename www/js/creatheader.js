@@ -2,11 +2,11 @@
 
 function createMenuContents(){
     var menucontents = new Array();
-    menucontents[0] = { "name": "mappage", "href":"#mappage", "class":"menumap", text: "Map"};
-    menucontents[1] = { "name": "takeatour", "href":"#takeatour", "class":"menutakeatour", text: "Take A Tour"};
-    menucontents[2] = { "name": "whattodo", "href":"#whattodo", "class":"menuwhattodo", text: "What To Do"};
-    menucontents[3] = { "name": "wheretogo", "href":"#wheretogo", "class":"menuwheretogo", text: "Where To Go"};
-    menucontents[4] = { "name": "setting", "href":"#setting", "class":"menusetting", text: "Setting"};
+    menucontents[0] = { "name": "mappage", "href":"#mappage", "class":"menumap", text: '<label class="map">Map</label>'};
+    menucontents[1] = { "name": "takeatour", "href":"#takeatour", "class":"menutakeatour", text: '<label class="tourheader">Take a tour</label>'};
+    menucontents[2] = { "name": "whattodo", "href":"#whattodo", "class":"menuwhattodo", text: '<label class="eventheader">What to do</label>'};
+    menucontents[3] = { "name": "wheretogo", "href":"#wheretogo", "class":"menuwheretogo", text: '<label class="poiheader">Where to go</label>'};
+    menucontents[4] = { "name": "setting", "href":"#setting", "class":"menusetting", text: '<label class="settingheader">Setting</label>'};
     return menucontents;
 }
 function createheader(page,pagename){

@@ -51,7 +51,7 @@ function setPOIs(POImarkers){
     for (var index in POImarkers){
         var markerinfo = POImarkers[index];
         var marker = L.marker([markerinfo.latitude,markerinfo.longitude]).addTo(map);
-        marker.bindPopup('<b>'+markerinfo.name+'</b><img src="img/play.png" alt="play" onclick="playaudio(\''+markerinfo.class+'\')">');
+        marker.bindPopup('<b>'+markerinfo.name+'</b><img src="img/play.png" alt="play" onclick="audio.playaudio(\''+markerinfo.class+'\')">');
     }   
 }
 
@@ -77,7 +77,7 @@ function setMyLocation(lat,long,radius){
             color: 'red',
             fillOpacity: 0.5
             }).addTo(map);   
-        myLocation.bindPopup("<b>You are here!</b>").openPopup();
+        myLocation.bindPopup('<b><label class="youAreHereText">You are here!</label></b>').openPopup();
     }
 }
 
@@ -92,15 +92,3 @@ function currentLocationWatch(freq){
 function cancelLocationWatch() {
     clearInterval(locationChangeWatch);
 }
-
-//------------
-//
-//function bindLocationChangeEvent(){
-//    var options = { maximumAge: 3000, timeout: 5000};
-//    locationChange = navigator.geolocation.watchPosition(setCurrentLocation, locationChangeError, options);
-//}
-//
-//function locationChangeError(error){
-//    alert("1");
-//    console.log("locationChangeError error: " + error.message);
-//}

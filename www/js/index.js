@@ -5,6 +5,9 @@ $(document).ready(function() {
     initmapWeb('c9a19f8807a64735aff2c22833d6817a',-34.92862, 138.59996, 16);
     initPOIs("extfiles/POIs.json");
     bindLanguageChangeEvent();
+    panelCloseEventDetect();
+    bindPanelOpenEvent();
+    bindPanelCloseEvent();
 });
 
 var app = {
@@ -25,10 +28,10 @@ var app = {
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         //initmap("d123a9c35892443a9f9b7f35b2922043",1); // from createMap.js
-        setAppLanguage();
-        sUtt = new SpeechSynthesisUtterance();
+        lang.initialize();
+        audio.initialize();
+        textdisplay.initialize(dictionary,lang);
         updateMyLocation();
-        //bindLocationChangeEvent();
         currentLocationWatch(5000);
         app.receivedEvent('deviceready');        
     },

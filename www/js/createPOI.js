@@ -21,7 +21,7 @@ function createPOIContents(){
 function createPOIs(ul){
      var POIContents = createPOIContents();
      for (content in POIContents){
-          ul.append('<li style="padding: 10px;" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="a" class=" poi'+ content +' no-padding ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-li-has-thumb ui-btn-up-a"></li>');
+          ul.append('<li style="padding: 10px;" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="c" class=" poi'+ content +' no-padding ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-li-has-thumb ui-btn-up-a"></li>');
           var li = ul.children(".poi" + content);
           li.append('<div class="ui-btn-inner ui-li"></div>');
           var divui = li.children(".ui-li");
@@ -33,7 +33,7 @@ function createPOIs(ul){
           a.append('<img src="'+POIContents[content]['imgsrc']+'" class="ui-li-thumb">');
           a.append('<h2 class="name'+ POIContents[content]['id'] +' ui-li-heading">'+POIContents[content]['name']+'</h2>');
           a.append('<p class="descri'+ POIContents[content]['id'] +' ui-li-desc">'+POIContents[content]['descri']+'</p>');
-        divui.append('<span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span>');           
+          divui.append('<span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span>');           
           divui.addClass('tap'); // for testing the tap event
     }
 }

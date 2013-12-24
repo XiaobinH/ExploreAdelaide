@@ -1,42 +1,37 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+var lang = {
+    initialize: function(language,supportedlang) {
+        language = typeof language !== 'undefined' ? language : "en";
+        supportedlang = typeof supportedlang !== 'undefined' ? supportedlang : {"Spanish":"es",
+                                                                                "English":"en"};
+        this.language = language;
+        this.supportedlang = supportedlang;
+        this.setAppLanguage();
+    },
 
-var language = 'default';
-var supportedlang = {
-	"Spanish":"es",
-        "English":"en"
+    language: '',
+
+    supportedlang : {},
+    
+    setAppLanguage : function (){
+        var temp = this;
+        navigator.globalization.getPreferredLanguage(
+            function (langobj) {temp.setlanguage(langobj.value);},
+            function () {temp.setdefaultlanguage();});        
+    },
+    
+    setlanguage: function (lang){    
+        if(typeof this.supportedlang[lang] == 'undefined'){        
+            console.log('not support '+lang);       
+            this.setdefaultlanguage();
+        }
+        else{        
+            this.language = this.supportedlang[lang];
+            console.log('set language '+lang);
+        }
+    },
+    
+    setdefaultlanguage: function (){
+        this.language = this.supportedlang['English'];
+        console.log('set default language');
+    },    
 };
-
-// call this function as soon as the device is ready    
-function setAppLanguage(){
-    navigator.globalization.getPreferredLanguage(
-        function (langobj) {setlanguage(langobj.value);},
-        function () {setdefaultlanguage();});        
-}
-
-
-function setlanguage(lang){    
-    if(typeof supportedlang[lang] == 'undefined'){        
-        console.log('not support '+lang);       
-        setdefaultlanguage();
-    }
-    else{        
-        language = supportedlang[lang];
-        console.log('set language '+lang);
-    }
-}
-
-function setdefaultlanguage(){
-    language = supportedlang['English'];
-    console.log('set default language');
-}
-
-function bindLanguageChangeEvent(){    
-    $( ".languagemenu" ).change(function () {  
-        var selectedLang = $(".languagemenu option:selected" ).val();
-        setlanguage(selectedLang);
-    });
-}

@@ -32,27 +32,6 @@ function tapholdHandler( event ){
 }
 
 $( window ).on( "orientationchange", function( event ) {
-//    var uuid = device.uuid;    
-//    alert(uuid);
-//    $.post("http://auth.cloudmade.com/token/d123a9c35892443a9f9b7f35b2922043?userid=1&deviceid="+uuid,function(token,status){
-//            alert("Data: " + token + "\nStatus: " + status);
-//            var http = 'http://{s}.tile.cloudmade.com/d123a9c35892443a9f9b7f35b2922043/997/256/{z}/{x}/{y}.png?token='+token;
-//                        alert(http);
-//                        L.tileLayer(http, {
-//                          maxZoom: 16,
-//                          attribution: 'Example made by <a href="http://www.gajotres.net">Gajotres</a>'
-//                        }).addTo(map);
-//                       map.on('locationfound', onLocationFound);
-//                       map.setView([-34.92862, 138.59996], 16);   
-////                       alert(3);
-////                       var ht2 = "http://b.tile.cloudmade.com/d123a9c35892443a9f9b7f35b2922043/1/256/15/17599/10746.png?token="+token;
-////                       alert(ht2);
-////                       window.open(ht2);  
-//                    alert($('#map').height());
-//                    alert($('#map').width());
-//                    map.invalidateSize();
-//        }
-//    );
 });
 
 function onLocationFound(e) {

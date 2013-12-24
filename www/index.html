@@ -29,6 +29,8 @@
         <script type="text/javascript" src="js/language.js"></script>   
         <!--Page Events-->
         <script type="text/javascript" src="js/pageevents.js"></script>  
+        <!--Dictionary for multi-language-->
+        <script type="text/javascript" src="js/textdisplay.js"></script>          
         <title>Explore Adelaide</title>
     </head>
     <body>
@@ -37,9 +39,9 @@
      <section data-role="page" id="mappage" data-theme="b" class="pages">    
             <div data-role="header" class="pageheader">
                 <a href="#nav-panel" class="iconcontrol"></a>
-                <h1 class="pagetitle">Explore Adelaide</h1>
+                <h1 class="pagetitle"><label class="mapheader">Explore Adelaide</label></h1>
             </div>
-            <div data-role="panel" id="nav-panel" class="pagepanel" data-swipe-close="true">
+            <div data-role="panel" id="nav-panel" class="pagepanel">
                 <div class="ui-panel-inner">
                     <ul class="panelcontent">                        
                     </ul>
@@ -55,7 +57,7 @@
         <section data-role="page" id="takeatour" data-title="Page Title" data-theme="b" class="pages" data-id="foo1">
             <div data-role="header" class="pageheader">
                 <a href="#nav-panel" class="iconcontrol"></a>
-                <h1 class="pagetitle">Take A Tour</h1>
+                <h1 class="pagetitle"><label class="tourheader">Take a tour</label></h1>
             </div>
             <div data-role="panel" id="nav-panel" class="pagepanel">
                 <div class="ui-panel-inner">
@@ -88,7 +90,7 @@
         <section data-role="page" id="whattodo" data-title="Page Title" data-theme="b" class="pages" data-id="foo1">
             <div data-role="header" class="pageheader">
                 <a href="#nav-panel" class="iconcontrol"></a>
-                <h1 class="pagetitle">What to do</h1>
+                <h1 class="pagetitle"><label class="eventheader">What to do</label></h1>
             </div>
             <div data-role="panel" id="nav-panel" class="pagepanel">
                 <div class="ui-panel-inner">
@@ -119,7 +121,7 @@
         <section data-role="page" id="wheretogo" data-title="Page Title" data-theme="b" class="pages" data-id="foo1">
             <div data-role="header" class="pageheader">
                 <a href="#nav-panel" class="iconcontrol"></a>
-                <h1 class="pagetitle">Where to go</h1>
+                <h1 class="pagetitle"><label class="poiheader">Where to go</label></h1>
             </div>
             <div data-role="panel" id="nav-panel" class="pagepanel">
                 <div class="ui-panel-inner">
@@ -139,7 +141,7 @@
         <section data-role="page" id="setting" data-title="Page Title" data-theme="b" class="pages" data-id="foo1">
             <div data-role="header" class="pageheader">
                 <a href="#nav-panel" class="iconcontrol"></a>
-                <h1 class="pagetitle">Setting</h1>
+                <h1 class="pagetitle"><label class="settingheader">Setting</label></h1>
             </div>
             <div data-role="panel" id="nav-panel" class="pagepanel no-padding">
                 <div class="ui-panel-inner">
@@ -150,7 +152,7 @@
             <script> createheader($('#setting'),'setting');</script>
                <div data-role="content" class="no-padding">
                     <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br">
-                        <label for="select-choice-15" class="select ui-select">Language</label>
+                        <label for="select-choice-15" class="select ui-select"><label class="languageText">Language</label></label>
                         <div class="ui-select">
                             <select class="languagemenu" name="select-choice-15" id="select-choice-15" data-theme="b" data-overlay-theme="d" data-native-menu="false" tabindex="-1">
                                 <option value="English">English</option>
@@ -159,14 +161,14 @@
                         </div>
                     </div>
                     <div data-role="fieldcontain">
-                    <label for="flip-2">Event Notification</label>
+                    <label for="flip-2"><label class="eventNotificationsSetting">Event Notification</label></label>
                             <select name="flip-2" id="flip-2" data-role="slider">
                                     <option value="nope">On</option>
                                     <option value="yep">Off</option>
                             </select> 
                     </div>
                    <div data-role="fieldcontain">
-                    <label for="flip-3">Auto Description</label>
+                    <label for="flip-3"><label class="autoDescriptionSetting">Auto Description</label></label>
                             <select name="flip-3" id="flip-3" data-role="slider">
                                     <option value="nope">On</option>
                                     <option value="yep">Off</option>
