@@ -3,10 +3,6 @@
         "en" : "Carnegie Mellon University Australia is the Australian campus of Carnegie Mellon University",
         "es" : "Carnegie Mellon University Australia Australia es el campus de Australia de la Universidad Carnegie Mellon"
     },
- "VictoriaSquare" : {
-        "en" : "Victoria Square, also known as Tarndanyangga, is a public square in the South Australian capital of Adelaide.",
-        "es" : "Plaza de la Victoria, también conocida como Tarndanyangga, es una plaza pública en la capital de Australia del Sur de Adelaide."
-    },
  "StFrancisXaviersCathedral" : {
         "en" : "St Francis Xavier's Cathedral is a Roman Catholic cathedral in Adelaide",
         "es" : "La Catedral de San Francisco Javier es una catedral católica en Adelaide"
@@ -14,5 +10,45 @@
  "CentralMarket" : {
         "en" : "The Adelaide Central Market is a popular tourist attraction and large multicultural market in the centre of the central business district in Adelaide",
         "es" : "El Mercado Central de Adelaida es una atracción turística popular y gran mercado multicultural en el centro del distrito de negocios central de Adelaida"
-    }    
+    },
+ "StateLibraryofSouthAustralia" : {
+        "en" : "The State Library of South Australia is the largest public reference library in South Australia with a collection focus on South Australian information and general reference material for information and research purposes.",
+        "es" : "La Biblioteca del Estado de Australia del Sur es la mayor biblioteca de consulta pública en el sur de Australia con un enfoque en la recolección de información de Australia del Sur y el material de referencia general para fines informativos y de investigación."
+    },
+ "AdelaideCasino" : {
+        "en" : "Located in Adelaide's historic Railway Station building, Adelaide Casino is South Australia's only casino destination and the city's most exciting gaming and entertainment venue.",
+        "es" : "Ubicado en el histórico edificio de la estación de tren de Adelaida, Adelaide Casino es el único destino de casino del sur de Australia y más excitante lugar de juego y entretenimiento de la ciudad."
+    },
+ "AdelaideTownHall" : {
+        "en" : "A landmark heritage building, the Adelaide Town Hall is steeped in history yet graced with every modern amenity. Its magnificent architecture and elegant interiors provide the perfect backdrop for corporate or private functions.",
+        "es" : "Un edificio de patrimonio histórico, el Ayuntamiento de Adelaida está llena de historia aún adornado con todas las comodidades modernas. Sus magníficos interiores de arquitectura y elegantes ofrecen el escenario perfecto para eventos corporativos o privados."
+    },
+ "RundleMall" : {
+        "en" : " Rundle Mall is Adelaide’s premier retail destination and meeting place. With over 400,000 customers every week and 23 million visitors annually, Rundle Mall is the most popular attraction in the state of South Australia.",
+        "es" : "Rundle Mall es el principal destino de venta al público y lugar de encuentro de Adelaida. Con más de 400.000 clientes cada semana y 23 millones de visitantes al año, Rundle Mall es la atracción más popular en el estado de Australia del Sur."
+    },
+ "TandanyaNationalAboriginalCulturalInstitute" : {
+        "en" : "andanya is a visionary and vibrant place for all to explore and experience contemporary and traditional Aboriginal and Torres Strait Islander cultural expression, through the performing and visual arts.",
+        "es" : "andanya es un lugar visionario y dinámico para todos a explorar y la experiencia contemporánea y tradicional expresión cultural de los aborígenes y los isleños del Estrecho de Torres, a través de las artes escénicas y visuales."
+    },
+ "UniversityofAdelaide" : {
+        "en" : "The University of Adelaide is a world-class tertiary education and research institution committed to delivering high quality and distinct learning, teaching and research experiences.",
+        "es" : "La Universidad de Adelaida es una educación e investigación institución de educación superior de clase mundial comprometida con la entrega de alta calidad y un aprendizaje distinto, experiencias de enseñanza y de investigación."
+    },
+ "HurtleSquare" : {
+        "en" : "Hurtle Square is a public square in Adelaide, South Australia. It is located in the centre of the south-eastern quarter of the city, and surrounds the intersection of Halifax and Pulteney Streets.",
+        "es" : "Se lanzan Square es una plaza pública en Adelaide, Australia del Sur. Se encuentra ubicado en el centro del barrio del sudeste de la ciudad, y rodea la intersección de Halifax y Pulteney Street."
+    },
+ "WhitmoreSquare" : {
+        "en" : "Whitmore Square is a public square in the centre of the south-western quarter of the Adelaide city centre. It surrounds the intersection of Sturt and Morphett Streets.",
+        "es" : "Square Whitmore es una plaza pública en el centro del barrio sur-oeste del centro de la ciudad de Adelaida. Rodea la intersección de Sturt y Morphett Streets."
+    },
+ "HindleyStreet" : {
+        "en" : "Hindley Street is located in the north-west quarter of the centre of Adelaide. Now known for its atmosphere and active nightlife, the street was one of the first built in Adelaide and is thus of historical significance. The first newspaper in South Australia was printed in premises on Hindley Street.",
+        "es" : "Hindley Street se encuentra en el barrio noroeste del centro de Adelaida. Ahora conocido por su ambiente y activa vida nocturna, la calle fue uno de los primeros construidos en Adelaida y es por lo tanto de importancia histórica. El primer periódico de Australia del Sur se imprimió en un local en la calle Hindley."
+    },
+ "StPatricksChurch" : {
+        "en" : "The Church of St Patrick, located in the inner city area is an adjunct to the Cathedral. It is primarily used by multi-cultural communities for Masses in languages other than English.",
+        "es" : "La Iglesia de San Patricio, ubicada en la zona centro de la ciudad es un complemento a la Catedral. Se utiliza sobre todo por las comunidades multiculturales de las misas en idiomas distintos del Inglés."
+    }      
 }

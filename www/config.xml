@@ -2,7 +2,7 @@
 <widget xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" id="com.coolappz.ExploreAdelaide" version="1.0.0">
     <name>ExploreAdelaide</name>
     <description>Cordova Application</description>
-    <author email="info@com.coolappz" href="http://www.coolappz.com">think</author>
+    <author email="xiaobin.after2012@gmail.com" href="xiaobin.after2012@gmail.com">Ben</author>
     <access origin="*"/>
     <preference name="fullscreen" value="false"/>
     <preference name="webviewbounce" value="true"/>

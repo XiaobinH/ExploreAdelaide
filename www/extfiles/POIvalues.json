@@ -1,0 +1,93 @@
+{
+	"CMUA": {
+		"late-evening": 1,
+		"early-morning": 2,
+		"morning": 7,
+		"afternoon": 8,
+		"evening": 1
+	},
+	"CentralMarket": {
+		"late-evening": 1,
+		"early-morning": 2,
+		"morning": 7,
+		"afternoon": 8,
+		"evening": 1
+	},
+	"StFrancisXaviersCathedral": {
+		"late-evening": 3,
+		"early-morning": 4,
+		"morning": 9,
+		"afternoon": 8,
+		"evening": 3
+	},
+	"StateLibraryofSouthAustralia": {
+		"late-evening": 3,
+		"early-morning": 4,
+		"morning": 7,
+		"afternoon": 9,
+		"evening": 3
+	},
+	"AdelaideCasino": {
+		"late-evening": 10,
+		"early-morning": 3,
+		"morning": 1,
+		"afternoon": 1,
+		"evening": 6
+	},
+	"AdelaideTownHall": {
+		"late-evening": 3,
+		"early-morning": 4,
+		"morning": 8,
+		"afternoon": 6,
+		"evening": 3
+	},
+	"RundleMall": {
+		"late-evening": 3,
+		"early-morning": 4,
+		"morning": 8,
+		"afternoon": 9,
+		"evening": 3
+	},
+	"TandanyaNationalAboriginalCulturalInstitute": {
+		"late-evening": 1,
+		"early-morning": 2,
+		"morning": 7,
+		"afternoon": 8,
+		"evening": 1
+	},
+	"UniversityofAdelaide": {
+		"late-evening": 5,
+		"early-morning": 8,
+		"morning": 5,
+		"afternoon": 3,
+		"evening": 8
+	},
+	"HurtleSquare": {
+		"late-evening": 1,
+		"early-morning": 7,
+		"morning": 8,
+		"afternoon": 2,
+		"evening": 3
+	},
+	"WhitmoreSquare": {
+		"late-evening": 1,
+		"early-morning": 7,
+		"morning": 8,
+		"afternoon": 2,
+		"evening": 3
+	},
+	"HindleyStreet": {
+		"late-evening": 10,
+		"early-morning": 2,
+		"morning": 1,
+		"afternoon": 1,
+		"evening": 6
+	},
+	"StPatricksChurch": {
+		"late-evening": 1,
+		"early-morning": 2,
+		"morning": 6,
+		"afternoon": 6,
+		"evening": 1
+	}
+}

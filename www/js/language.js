@@ -1,14 +1,15 @@
 var lang = {
     initialize: function(language,supportedlang) {
-        language = typeof language !== 'undefined' ? language : "en";
-        supportedlang = typeof supportedlang !== 'undefined' ? supportedlang : {"Spanish":"es",
-                                                                                "English":"en"};
+        language = typeof language !== 'undefined' ? language : "es";
+        supportedlang = typeof supportedlang !== 'undefined' ? supportedlang : {"español":"es",
+                                                                                "English":"en",
+                                                                                "Spanish":"es"};
         this.language = language;
         this.supportedlang = supportedlang;
         this.setAppLanguage();
     },
 
-    language: '',
+    language: 'en',
 
     supportedlang : {},
     

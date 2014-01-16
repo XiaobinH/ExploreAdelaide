@@ -1,15 +1,3 @@
-$(document).on('pageinit', '#mappage', function(){  
-});
-
-$(document).ready(function() {
-    initmapWeb('c9a19f8807a64735aff2c22833d6817a',-34.92862, 138.59996, 16);
-    initPOIs("extfiles/POIs.json");
-    bindLanguageChangeEvent();
-    panelCloseEventDetect();
-    bindPanelOpenEvent();
-    bindPanelCloseEvent();
-});
-
 var app = {
     // Application Constructor
     initialize: function() {
@@ -29,10 +17,12 @@ var app = {
     onDeviceReady: function() {
         //initmap("d123a9c35892443a9f9b7f35b2922043",1); // from createMap.js
         lang.initialize();
-        audio.initialize();
+        audio.initialize('extfiles/audio.json');
+        adEvent.initialize('exploreadelaide','srr5x5ghcgtt');
         textdisplay.initialize(dictionary,lang);
-        updateMyLocation();
-        currentLocationWatch(5000);
+        admap.initmapWeb('c9a19f8807a64735aff2c22833d6817a',-34.92862, 138.59996, 14);
+        poi.initialize(admap,"extfiles/POIs.json");
+        myLocation.initialize(admap);
         app.receivedEvent('deviceready');        
     },
     // Update DOM on a Received Event

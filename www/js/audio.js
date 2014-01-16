@@ -1,5 +1,7 @@
 var audio = {
     
+    playingmarker: null,
+    
     audiotextpath : '',
     
     sUtt : null,   
@@ -12,6 +14,12 @@ var audio = {
     
     // the default language is english
     playaudio: function(classname,defaultlanguage){
+        this.stopaudio();
+        var marker = poi.pois[classname].marker;
+        var markerinfo = poi.pois[classname];
+        var popup = marker.getPopup();
+        popup.setContent('<b>'+markerinfo.name[lang.language]+'</b><label><img src="img/stop.jpg" alt="play" onclick="audio.stopaudio()">');
+        this.playingmarker = markerinfo;
         var language = lang.language;
         defaultlanguage = typeof defaultlanguage !== 'undefined' ? defaultlanguage : "en";
         $.getJSON(this.audiotextpath, function(data) {
@@ -21,6 +29,17 @@ var audio = {
             else
                 audio.playText(data[classname][language],language);
         });
+    },
+    
+    stopaudio: function(){
+        if (this.playingmarker != null){
+            var markerinfo = this.playingmarker;
+            var marker = markerinfo.marker;
+            var popup = marker.getPopup();
+            popup.setContent('<b>'+markerinfo.name[lang.language]+'</b><label><img src="img/play.png" alt="play" onclick="audio.playaudio(\''+markerinfo.class+'\')">');
+            this.playingmarker = null;
+            speechSynthesis.cancel();
+        }
     },
     
     // by default, pitch is 1.3 and rate is 0.95

@@ -19,6 +19,7 @@
         <link rel="stylesheet" type="text/css" href="css/map.css" /> 
         <!--self defined CSS-->
         <link rel="stylesheet" type="text/css" href="css/define.css" />
+        <link rel="stylesheet" type="text/css" href="css/layout.css" />
         <!--Slide menu-->
         <script type="text/javascript" src="js/creatheader.js"></script>
         <!--POI lists-->
@@ -29,8 +30,14 @@
         <script type="text/javascript" src="js/language.js"></script>   
         <!--Page Events-->
         <script type="text/javascript" src="js/pageevents.js"></script>  
+        <!--Upcoming Adelaide Events-->
+        <script type="text/javascript" src="js/createEvents.js"></script>          
         <!--Dictionary for multi-language-->
-        <script type="text/javascript" src="js/textdisplay.js"></script>          
+        <script type="text/javascript" src="js/textdisplay.js"></script>      
+        <!--Current location-->
+        <script type="text/javascript" src="js/myLocation.js"></script>        
+        <!--load recommendroute-->
+        <script type="text/javascript" src="js/recommendroute.js"></script>         
         <title>Explore Adelaide</title>
     </head>
     <body>
@@ -49,9 +56,25 @@
             </div>
             <script> createheader($('#mappage'),'mappage');</script>
             <div data-role="content">
-                <div id="map">1</div>             
+                <div id="map">1</div>            
+                
              </div>
+            <div data-role="footer" class="takeatourGuide">
+                <div class="takeatourGuidelayout ui-grid-b">
+                    <div class="ui-block-a">
+                        <a href="#" data-role="button" onclick="recomEnge.closeRoute();">Close</a>
+                    </div>
+                    <div class="ui-block-b">
+                        <a href="#" data-role="button" onclick="recomEnge.routeBack();">Previous</a>
+                    </div>
+                    <div class="ui-block-c">
+                        <a href="#" data-role="button" onclick="recomEnge.routeNext();">Next</a>
+                    </div>                    
+                </div>
+            </div>
+            
         </section>
+        
  
         <!-- Take a Tour Page -->
         <section data-role="page" id="takeatour" data-title="Page Title" data-theme="b" class="pages" data-id="foo1">
@@ -67,21 +90,48 @@
             </div>
             <script> createheader($('#takeatour'),'takeatour');</script>
             <div data-role="content">
-                <div class="ui-grid-a">
-                    <div class="ui-block-a" data-theme="a" data-content-theme="a">
-                        <p class="hover">Green Tour starts from CMUA. It guides you to explore Spring Adelaide.</p>
-                        <p class="hover">There purple followers are beautiful. In the morning you will love it.</p>
-                        <p class="hover">Biking and jogging are common in CBD. Want to be health? Join us!</p>
-                        <p class="hover">Badminton clubs are very common in CBD. Don't miss matches in clubs!</p>
-                        <a href="index.html" data-role="button">Green</a>
+                <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br">
+                    <div class="ui-grid-a navigation1">
+                        <div class="ui-block-a">
+                            <div class="ui-grid-a navigation2">
+                                <div class="ui-block-a">
+                                   <label for="select-choice-from" class="select ui-select"><label class="fromtext">From</label></label>
+                                </div>
+                                <div class="ui-block-b">
+                                    <div class="ui-select" style="width:100%">
+                                        <select class="frommenu" name="select-choice-from" id="select-choice-from" data-theme="b" data-overlay-theme="d" data-native-menu="false" tabindex="-1">
+                                            <option value="nearest">My nearest POI</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--
+                            <div class="ui-grid-a navigation2">
+                                <div class="ui-block-a">
+                                   <label for="select-choice-to" class="select ui-select"><label class="totext">To</label></label>
+                                </div>
+                                <div class="ui-block-b">
+                                    <div class="ui-select" style="width:100%">
+                                        <select class="tomenu" name="select-choice-to" id="select-choice-to" data-theme="b" data-overlay-theme="d" data-native-menu="false" tabindex="-1">
+                                            <option value="nearest">My nearest POI</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>    
+                            -->
+                        </div>
+                        <div class="ui-block-b" style="text-align:center">
+                            <!--<img src="img/switch.png" alt="switch" onclick="audio.playaudio()">-->
+                            <a href="#" data-role="button" onclick="recomEnge.recommendRoute();">Go</a>
+                        </div>
                     </div>
-                    <div class="ui-block-b" data-content-theme="a">
-                        <p class="hover">Golden Tour will lead you to the best shops and stroes in Adelaide.</p>
-                        <p class="hover">Big sale in Central Market on Saturday is very famous. Don't miss it!</p>
-                        <p class="hover">Body wash is very cheap in Runddle mall. There are a lot of clothes too.</p>
-                        <p class="hover">Don't miss the Oyster bars in Adelaide! The best in the world!</p>                        
-                        <a href="index.html" data-role="button">Golden</a>
-                    </div>
+                </div>    
+                <div >
+                    <ul class="routeResult" data-role="listview" data-theme="c" style="margin : 0px">
+                        <li class="sroute"><a onclick='recomEnge.displayRoute("sroute")'><h2>Short tour : around 120 mins</h2><p></p></a></li>
+                        <li class="mroute"><a onclick='recomEnge.displayRoute("mroute")'><h2>Regular tour : around 180 mins</h2><p></p></a></li>
+                        <li class="lroute"><a onclick='recomEnge.displayRoute("lroute")'><h2>Long tour : around 240 mins</h2><p></p></a></li>                    
+                    </ul>
                 </div>
             </div>
         </section>       
@@ -100,20 +150,8 @@
             </div>
             <script> createheader($('#whattodo'),'whattodo');</script>
             <div data-role="content">
-                <div data-role="collapsible-set">  
-                     <div data-role="collapsible" data-transition="slideup">
-                         <h3 class="todotitle">Visit Ruddle Mall</h3>
-                         <p class="todocontent dblclick">Cheap Deals!</p>
-                     </div>
-                     <div data-role="collapsible" data-transition="slideup">
-                         <h3 class="todotitle">Christmas Parade</h3>
-                         <p class="todocontent dblclick">Lots of kids!</p>
-                     </div>
-                     <div data-role="collapsible" data-transition="slideup">
-                         <h3 class="todotitle">Bike Competition</h3>
-                         <p class="todocontent dblclick">$5000 Award!</p>
-                     </div>   
-                </div> 
+                <ul id='eventsul' data-role="listview" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">       	
+                </ul> 
             </div>
         </section>       
 
@@ -134,7 +172,6 @@
                 <ul id='POIul' data-role="listview" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">       	
                 </ul>                
             </div>
-            <script>createPOIs($('#POIul'));</script>
         </section>       
  
          <!-- Setting Page -->
@@ -152,27 +189,45 @@
             <script> createheader($('#setting'),'setting');</script>
                <div data-role="content" class="no-padding">
                     <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br">
-                        <label for="select-choice-15" class="select ui-select"><label class="languageText">Language</label></label>
-                        <div class="ui-select">
-                            <select class="languagemenu" name="select-choice-15" id="select-choice-15" data-theme="b" data-overlay-theme="d" data-native-menu="false" tabindex="-1">
-                                <option value="English">English</option>
-                                <option value="Spanish">español</option>
-                            </select>
+                        <div class="ui-grid-a">
+                            <div class="ui-block-a">
+                               <label for="select-choice-15" class="select ui-select"><label class="languageText">Language</label></label>
+                            </div>
+                            <div class="ui-block-b">
+                                <div class="ui-select" style="width:100%" >
+                                    <select class="languagemenu" name="select-choice-15" id="select-choice-15" data-theme="b" data-overlay-theme="d" data-native-menu="false" tabindex="-1" >
+                                        <option value="English">English</option>
+                                        <option value="Spanish">español</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div data-role="fieldcontain">
-                    <label for="flip-2"><label class="eventNotificationsSetting">Event Notification</label></label>
-                            <select name="flip-2" id="flip-2" data-role="slider">
-                                    <option value="nope">On</option>
-                                    <option value="yep">Off</option>
-                            </select> 
+                        <div class="ui-grid-a">
+                            <div class="ui-block-a">
+                                <label for="flip-2" style="width:100%"><label class="eventNotificationsSetting">Event Notification</label></label>
+                            </div>
+                            <div class="ui-block-b">
+                                <select name="flip-2" id="flip-2" data-role="slider">
+                                        <option value="nope">On</option>
+                                        <option value="yep">Off</option>
+                                </select> 
+                            </div>
+                        </div>
                     </div>
                    <div data-role="fieldcontain">
-                    <label for="flip-3"><label class="autoDescriptionSetting">Auto Description</label></label>
-                            <select name="flip-3" id="flip-3" data-role="slider">
-                                    <option value="nope">On</option>
-                                    <option value="yep">Off</option>
-                            </select> 
+                       <div class="ui-grid-a">
+                           <div class="ui-block-a">
+                                <label for="flip-3" style="width:100%"><label class="autoDescriptionSetting">Auto Description</label></label>
+                           </div>
+                           <div  class="ui-block-b">
+                               <select name="flip-3" id="flip-3" data-role="slider">
+                                       <option value="nope">On</option>
+                                       <option value="yep">Off</option>
+                               </select> 
+                           </div>
+                       </div>
                     </div>                   
                </div>
         </section>       
@@ -181,7 +236,6 @@
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/createMap.js"></script> 
         <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript" src="js/movement.js"></script>       
         <script type="text/javascript">
             app.initialize();            
         </script>

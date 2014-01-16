@@ -9,7 +9,8 @@ var dictionary = {
         "languageText":{"en":"Language", "es":"idioma"},
         "eventNotificationsSetting":{"en":"Event Notification", "es":"notificación de eventos"},
         "autoDescriptionSetting":{"en":"Auto Description", "es":"Auto Descripción"},
-        "youAreHereText":{"en":"You are here!", "es":"Usted está aquí!"}        
+        "totext":{"es":"a", "en":"to"},
+        "fromtext":{"es":"desde", "en":"from"}        
 };
 
 var textdisplay = {
