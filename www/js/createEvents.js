@@ -15,6 +15,7 @@ var adEvent = {
             username: adEvent.username,
             password: adEvent.password,
             success: function(data) { 
+                $(".eventnotification").attr( "hidden","" );
                 var eventContents = adEvent.extractEvents(data); 
                 adEvent.displayEvents(eventContents,ul) 
             },

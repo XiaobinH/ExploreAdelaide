@@ -55,7 +55,8 @@ var recomEnge = {
             var classname = recomEnge[this.routeshow].winner.route[this.routeindex];
             admap.map.panTo(poi.pois[classname].marker.getLatLng());
             poi.pois[classname].marker.openPopup();
-            audio.playaudio(classname);
+            if(audio.autoDes)
+                audio.playaudio(classname);
         } else{
             alert("End of Trip!");
         }        
@@ -66,7 +67,8 @@ var recomEnge = {
             var classname = recomEnge[this.routeshow].winner.route[this.routeindex];
             admap.map.panTo(poi.pois[classname].marker.getLatLng());
             poi.pois[classname].marker.openPopup();
-            audio.playaudio(classname);
+            if(audio.autoDes)
+                audio.playaudio(classname);
         } else{
             alert("Start of Trip!");
         }          
@@ -87,7 +89,8 @@ var recomEnge = {
             setTimeout(function(){
                 admap.map.setView(poi.pois[classname].marker.getLatLng(),16);
                 poi.pois[classname].marker.openPopup();
-                audio.playaudio(classname);
+                if(audio.autoDes)
+                    audio.playaudio(classname);
             },500);
         }   
     },

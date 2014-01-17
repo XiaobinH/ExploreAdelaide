@@ -91,42 +91,24 @@
             <script> createheader($('#takeatour'),'takeatour');</script>
             <div data-role="content">
                 <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br">
-                    <div class="ui-grid-a navigation1">
+                    <div class="ui-grid-b navigation1">
                         <div class="ui-block-a">
-                            <div class="ui-grid-a navigation2">
-                                <div class="ui-block-a">
-                                   <label for="select-choice-from" class="select ui-select"><label class="fromtext">From</label></label>
-                                </div>
-                                <div class="ui-block-b">
-                                    <div class="ui-select" style="width:100%">
-                                        <select class="frommenu" name="select-choice-from" id="select-choice-from" data-theme="b" data-overlay-theme="d" data-native-menu="false" tabindex="-1">
-                                            <option value="nearest">My nearest POI</option>
-                                        </select>
-                                    </div>
-                                </div>
+                            <label for="select-choice-from" class="select ui-select"><label class="fromtext">From</label></label>
+                         </div>
+                        <div class="ui-block-b">
+                            <div class="ui-select">
+                                <select class="frommenu" name="select-choice-from" id="select-choice-from" data-theme="b" data-overlay-theme="d" data-native-menu="false" tabindex="-1">
+                                    <option value="nearest">My nearest POI</option>
+                                </select>
                             </div>
-                            <!--
-                            <div class="ui-grid-a navigation2">
-                                <div class="ui-block-a">
-                                   <label for="select-choice-to" class="select ui-select"><label class="totext">To</label></label>
-                                </div>
-                                <div class="ui-block-b">
-                                    <div class="ui-select" style="width:100%">
-                                        <select class="tomenu" name="select-choice-to" id="select-choice-to" data-theme="b" data-overlay-theme="d" data-native-menu="false" tabindex="-1">
-                                            <option value="nearest">My nearest POI</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>    
-                            -->
-                        </div>
-                        <div class="ui-block-b" style="text-align:center">
+                        </div>                        
+                        <div class="ui-block-c">
                             <!--<img src="img/switch.png" alt="switch" onclick="audio.playaudio()">-->
                             <a href="#" data-role="button" onclick="recomEnge.recommendRoute();">Go</a>
                         </div>
                     </div>
-                </div>    
-                <div >
+                </div>
+                <div>
                     <ul class="routeResult" data-role="listview" data-theme="c" style="margin : 0px">
                         <li class="sroute"><a onclick='recomEnge.displayRoute("sroute")'><h2>Short tour : around 120 mins</h2><p></p></a></li>
                         <li class="mroute"><a onclick='recomEnge.displayRoute("mroute")'><h2>Regular tour : around 180 mins</h2><p></p></a></li>
@@ -150,27 +132,11 @@
             </div>
             <script> createheader($('#whattodo'),'whattodo');</script>
             <div data-role="content">
+                <div class="eventnotification">
+                    <h1>downloading events..</h1>
+                </div>
                 <ul id='eventsul' data-role="listview" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">       	
                 </ul> 
-            </div>
-        </section>       
-
-         <!-- Where to go Page -->
-        <section data-role="page" id="wheretogo" data-title="Page Title" data-theme="b" class="pages" data-id="foo1">
-            <div data-role="header" class="pageheader">
-                <a href="#nav-panel" class="iconcontrol"></a>
-                <h1 class="pagetitle"><label class="poiheader">Where to go</label></h1>
-            </div>
-            <div data-role="panel" id="nav-panel" class="pagepanel">
-                <div class="ui-panel-inner">
-                    <ul class="panelcontent">                        
-                    </ul>
-                </div>
-            </div>
-            <script> createheader($('#wheretogo'),'wheretogo');</script>
-            <div data-role="content" class="no-padding">
-                <ul id='POIul' data-role="listview" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">       	
-                </ul>                
             </div>
         </section>       
  
@@ -202,7 +168,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div><!--
                     <div data-role="fieldcontain">
                         <div class="ui-grid-a">
                             <div class="ui-block-a">
@@ -215,16 +181,16 @@
                                 </select> 
                             </div>
                         </div>
-                    </div>
+                    </div>-->
                    <div data-role="fieldcontain">
                        <div class="ui-grid-a">
                            <div class="ui-block-a">
-                                <label for="flip-3" style="width:100%"><label class="autoDescriptionSetting">Auto Description</label></label>
+                                <label for="flip-3" style="width:100%"><label class="autoDescriptionSetting">Auto Audio Description</label></label>
                            </div>
                            <div  class="ui-block-b">
-                               <select name="flip-3" id="flip-3" data-role="slider">
-                                       <option value="nope">On</option>
-                                       <option value="yep">Off</option>
+                               <select class='descriptionmenu' name="flip-3" id="flip-3" data-role="slider">
+                                       <option value="yes">On</option>
+                                       <option value="no">Off</option>
                                </select> 
                            </div>
                        </div>

@@ -1,5 +1,7 @@
 var audio = {
     
+    autoDes: true,
+    
     playingmarker: null,
     
     audiotextpath : '',
